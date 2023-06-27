@@ -1,0 +1,33 @@
+{
+  "root": true,
+  "plugins": ["@typescript-eslint", "import", "prettier", "jest"],
+  "extends": [
+    "airbnb-typescript/base",
+    "prettier",
+    "@typescript-eslint/parser",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/typescript"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.eslint.json"
+  },
+  "ignorePatterns": ["bin/*"],
+  "rules": {
+    "import/extensions": 0,
+    "object-curly-newline": "off",
+    "implicit-arrow-linebreak": "off",
+    "operator-linebreak": "off",
+    "import/prefer-default-export": "off",
+    "class-methods-use-this": "off",
+    "indent": "off",
+    "@typescript-eslint/ban-ts-comment": 0,
+    "@typescript-eslint/no-unused-vars": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
+}
