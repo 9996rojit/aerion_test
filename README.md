@@ -58,11 +58,11 @@ Open your browser and visit http://localhost:5173 to access the application.
 Project Structure
 The project structure follows the standard structure for Node.js and Vite projects:
 
-src/ - Contains the source code for the application.
-src/index.ts - Entry point for the Node.js server.
-src/routes/ - Contains the server routes for handling HTTP requests.
-src/controllers/ - Contains the controllers for handling the business logic.
-src/models/ - Contains the MongoDB database model.
+- src/ - Contains the source code for the application.
+- src/index.ts - Entry point for the Node.js server.
+- src/routes/ - Contains the server routes for handling HTTP requests.
+- src/controllers/ - Contains the controllers for handling the business logic.
+- src/models/ - Contains the MongoDB database model.
 
 Contributing
 Contributions are welcome! If you find any issues or have suggestions for improvement, please create an issue or submit a pull request.
