@@ -61,16 +61,6 @@ export const DataProvider = ({ children }: IChildrenProps) => {
         DocumentData: resData.DocumentData,
         TotalData: resData.TotalData[0],
       });
-      toast.success('Data fetched successfully!', {
-        position: 'top-right',
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: 'light',
-      });
     } catch (error) {
       console.error('Error fetching data:', error);
       toast.error('Error fetching data:', {
