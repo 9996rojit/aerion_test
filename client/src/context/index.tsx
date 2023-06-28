@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/no-shadow */
 /* eslint-disable react/jsx-no-constructed-context-values */
 import React, { createContext, useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 
 interface Expense {
   _id?: string;
@@ -60,8 +61,28 @@ export const DataProvider = ({ children }: IChildrenProps) => {
         DocumentData: resData.DocumentData,
         TotalData: resData.TotalData[0],
       });
+      toast.success('Data fetched successfully!', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+      });
     } catch (error) {
       console.error('Error fetching data:', error);
+      toast.error('Error fetching data:', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+      });
     }
   };
 
@@ -84,8 +105,28 @@ export const DataProvider = ({ children }: IChildrenProps) => {
         DocumentData: { ...data?.DocumentData, createdData },
         TotalData: { ...data?.TotalData },
       });
+      toast.success('Data fetched successfully!', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+      });
     } catch (error) {
       console.error('Error creating data:', error);
+      toast.error('Error creating data:', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+      });
     }
   };
 
@@ -95,8 +136,28 @@ export const DataProvider = ({ children }: IChildrenProps) => {
       const response = await fetch(`http://localhost:5656/api/v1/${id}`);
       const createdData: Expense = await response.json();
       setExpenseData(createdData);
+      toast.success('Data fetched successfully!', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+      });
     } catch (error) {
-      console.error('Error creating data:', error);
+      console.error('Error fetching data:', error);
+      toast.error('Error fetching data:', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+      });
     }
   };
 
@@ -119,8 +180,28 @@ export const DataProvider = ({ children }: IChildrenProps) => {
           TotalData: prevData?.TotalData,
         };
       });
+      toast.success('Data updated successfully!', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+      });
     } catch (error) {
-      console.error('Error creating data:', error);
+      console.error('Error upating data:', error);
+      toast.error('Error upating data:', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+      });
     }
   };
 
